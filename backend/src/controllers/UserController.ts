@@ -11,6 +11,7 @@ export default {
     },
     async create(req: Request, res: Response) {
         const { name, email } = req.body;
+        users.push({ name, email });
         const emailService = new EmailService();
         await emailService.sendMail({
             to: {
