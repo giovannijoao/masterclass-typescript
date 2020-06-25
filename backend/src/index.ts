@@ -3,6 +3,8 @@ import routes from './routes';
 
 const app = express();
 
+app.use(express.json());
+
 app.get('/', (req, res) => res.send({
     message: `I'm working 🚀 at ${new Date().toISOString()}`,
 }));
@@ -14,7 +16,7 @@ app.use((req, res, next) => {
 
 app.use(routes);
 
-
-app.listen(2323, () => {
-    console.log(`✨ Listening to 2323.`)
+const port = 3333;
+app.listen(port, () => {
+    console.log(`✨ Listening to ${port}.`)
 });
