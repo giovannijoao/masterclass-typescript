@@ -23,7 +23,7 @@ export default {
             }
         });
         res.send({
-            msssage: 'Cadastro realizado'
+            message: 'Cadastro realizado'
         })
     }
 }
